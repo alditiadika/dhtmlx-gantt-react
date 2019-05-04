@@ -4,7 +4,9 @@
   "description": "dhtmlx with react",
   "main": "index.js",
   "scripts": {
-    "test": "react-scripts start"
+    "test": "react-scripts test",
+    "start": "react-scripts start",
+    "clean": "rm -rf node_modules && rm -rf package-lock.json && npm install"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,10 @@
   },
   "homepage": "https://github.com/alditiadika/dhtmlx-gantt-react#readme",
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
     "dhtmlx-gantt": "^6.1.5",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
@@ -30,5 +35,17 @@
     "reactstrap": "^8.0.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
