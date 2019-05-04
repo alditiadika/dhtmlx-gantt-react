@@ -1,4 +1,4 @@
-import { type } from "../redux/gantt/reducer"
+import { type } from '../redux/gantt/reducer'
 
 export default dispatch => ({
   loadGrid: payload => dispatch({ payload: payload, type: type.loadGrid }),

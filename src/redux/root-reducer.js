@@ -1,6 +1,6 @@
-import { combineReducers } from "redux"
+import { combineReducers } from 'redux'
 
-import { ganttReducer } from "./gantt/reducer"
+import { ganttReducer } from './gantt/reducer'
 
 export default combineReducers({
   ganttReducer: ganttReducer

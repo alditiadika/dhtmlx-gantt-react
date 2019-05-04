@@ -1,7 +1,7 @@
 export const type = {
-  test: "TEST_TYPE",
-  loadGrid: "LOAD_GANTT",
-  selectData: "GANTT_GRID_SELECT_DATA"
+  test: 'TEST_TYPE',
+  loadGrid: 'LOAD_GANTT',
+  selectData: 'GANTT_GRID_SELECT_DATA'
 }
 const initialState = {
   onLoad: false,
