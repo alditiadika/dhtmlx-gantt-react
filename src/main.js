@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Container, Card, CardBody, Row, Col } from "reactstrap";
+import React, { Component } from "react"
+import { Container, Card, CardBody, Row, Col } from "reactstrap"
 
-import Command from "./command-button";
-import Gantt from "./gantt";
+import Command from "./command-button"
+import Gantt from "./gantt"
 export default class extends Component {
   render() {
     return (
@@ -25,6 +25,6 @@ export default class extends Component {
           </CardBody>
         </Card>
       </Container>
-    );
+    )
   }
 }

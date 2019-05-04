@@ -12,7 +12,7 @@ const firstGridColumns = {
           '" class="special-test" type="checkbox"' +
           (task.status ? "checked" : "") +
           "/>"
-        );
+        )
       }
     },
     {
@@ -85,7 +85,7 @@ const firstGridColumns = {
       template: task => task.duration + " Days"
     }
   ]
-};
+}
 const secondGridColumns = {
   columns: [
     {
@@ -107,7 +107,7 @@ const secondGridColumns = {
       align: "center"
     }
   ]
-};
+}
 export const data = {
   data: [
     {
@@ -304,33 +304,33 @@ export const data = {
       open: true
     }
   ]
-};
+}
 export function setZoom(gantt, value) {
   switch (value) {
     case "Hours":
-      gantt.config.scale_unit = "day";
-      gantt.config.date_scale = "%d %M";
+      gantt.config.scale_unit = "day"
+      gantt.config.date_scale = "%d %M"
 
-      gantt.config.scale_height = 60;
-      gantt.config.min_column_width = 30;
-      gantt.config.subscales = [{ unit: "hour", step: 1, date: "%H" }];
-      break;
+      gantt.config.scale_height = 60
+      gantt.config.min_column_width = 30
+      gantt.config.subscales = [{ unit: "hour", step: 1, date: "%H" }]
+      break
     case "Days":
-      gantt.config.min_column_width = 70;
+      gantt.config.min_column_width = 70
       // gantt.config.scale_unit = 'week'
       // gantt.config.date_scale = '#%W'
-      gantt.config.subscales = [{ unit: "year", step: 1, date: "%Y" }];
-      gantt.config.scale_height = 60;
-      break;
+      gantt.config.subscales = [{ unit: "year", step: 1, date: "%Y" }]
+      gantt.config.scale_height = 60
+      break
     case "Months":
-      gantt.config.min_column_width = 70;
-      gantt.config.scale_unit = "month";
+      gantt.config.min_column_width = 70
+      gantt.config.scale_unit = "month"
       // gantt.config.date_scale = '%F'
-      gantt.config.scale_height = 60;
-      gantt.config.subscales = [{ unit: "year", step: 1, date: "%Y" }];
-      break;
+      gantt.config.scale_height = 60
+      gantt.config.subscales = [{ unit: "year", step: 1, date: "%Y" }]
+      break
     default:
-      break;
+      break
   }
 }
 export const layout = {
@@ -377,4 +377,4 @@ export const layout = {
     },
     { view: "scrollbar", id: "scrollHor", height: 20 }
   ]
-};
+}

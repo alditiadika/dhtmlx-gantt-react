@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Add from "@material-ui/icons/Add";
-import Remove from "@material-ui/icons/Remove";
+import React, { Component } from "react"
+import Add from "@material-ui/icons/Add"
+import Remove from "@material-ui/icons/Remove"
 
-import { Tooltip } from "./utils";
+import { Tooltip } from "./utils"
 
 export default class extends Component {
   render() {
@@ -25,6 +25,6 @@ export default class extends Component {
           style={{ cursor: "pointer" }}
         />
       </div>
-    );
+    )
   }
 }

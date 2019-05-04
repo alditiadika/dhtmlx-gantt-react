@@ -1,5 +1,5 @@
-import { UncontrolledTooltip } from "reactstrap";
-import React from "react";
+import { UncontrolledTooltip } from "reactstrap"
+import React from "react"
 export const Tooltip = ({
   message,
   placement,
@@ -14,5 +14,5 @@ export const Tooltip = ({
       </UncontrolledTooltip>
       <Data id={keyname} {...props} />
     </>
-  );
-};
+  )
+}
