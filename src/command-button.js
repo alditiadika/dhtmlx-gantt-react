@@ -13,7 +13,7 @@ export default class extends Component {
           placement='bottom'
           keyname='add-button'
           data={Add}
-          onClick={() => alert('add')}
+          onClick={() => this.props.toogleModal(true)}
           style={{ cursor: 'pointer' }}
         />
         <Tooltip

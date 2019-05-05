@@ -6,7 +6,7 @@ export const type = {
 const initialState = {
   onLoad: false,
   gantt: null,
-  dataGrid: []
+  dataGrid: { data: [] }
 }
 export const ganttReducer = (state = { ...initialState }, action) => {
   switch (action.type) {

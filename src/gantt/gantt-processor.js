@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { gantt } from 'dhtmlx-gantt'
-import { setZoom, layout, data } from './config'
+import { setZoom, layout } from './config'
 import mapDispatchToProps from './actions'
+import { mapStateToProps } from '../redux/root-reducer'
 class Gantt extends Component {
   componentDidMount() {
+    const { dataGrid } = this.props.ganttReducer
     gantt.config.layout = layout
     gantt.config.order_branch = 'marker'
     gantt.config.order_branch_free = 'marker'
@@ -15,8 +17,8 @@ class Gantt extends Component {
     gantt.attachEvent('onTaskDblClick', () => {
       return false
     })
-    this.props.loadGrid(data)
-    gantt.parse(data)
+    this.props.loadGrid(dataGrid)
+    gantt.parse(dataGrid)
   }
   render() {
     setZoom(gantt, 'Days')
@@ -30,9 +32,7 @@ class Gantt extends Component {
     )
   }
 }
-const mapStateToProps = state => ({
-  state: state
-})
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps

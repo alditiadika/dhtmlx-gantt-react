@@ -4,6 +4,7 @@ import 'dhtmlx-gantt/codebase/dhtmlxgantt.css'
 import './style.css'
 import Gantt from './gantt-processor'
 import mapDispatchToProps from './actions'
+import { mapStateToProps } from '../redux/root-reducer'
 class EntryGantt extends Component {
   componentWillMount() {
     window.addEventListener('click', rootE => {
@@ -17,12 +18,10 @@ class EntryGantt extends Component {
     })
   }
   render() {
-    return <Gantt isLoading={this.props.isLoading} />
+    return !this.props.ganttReducer.onLoad && <Gantt />
   }
 }
-const mapStateToProps = state => ({
-  ganttReducer: state.ganttReducer
-})
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps

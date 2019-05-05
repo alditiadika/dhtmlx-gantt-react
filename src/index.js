@@ -3,6 +3,7 @@ import reactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import Main from './main'
 import store from './redux/store'
+import './assets/all.css'
 class Index extends Component {
   render() {
     return (
